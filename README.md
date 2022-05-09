@@ -25,7 +25,7 @@ stream to UDP |                  through NAT to UDP|   | data stream
        +------+------+                          +--+---v------+
        | RTP + H264  |                          | RTP + H264  |
        |             |                          |             |
-       |Stream to UDP|                          |Stream to UDP|
+       |Stream to UDP|                          | from UDP    |
        +-------------+                          +-------------+
 ```
 
