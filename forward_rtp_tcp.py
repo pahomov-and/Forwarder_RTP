@@ -3,7 +3,10 @@ import threading
 import time
 import argparse
 import sys
-import thread
+try:
+    import _thread as thread  # using Python 3
+except ImportError:
+    import thread  # falls back to import from Python 2
 
 BUFER_SIZE = 4 * 1024 
 
