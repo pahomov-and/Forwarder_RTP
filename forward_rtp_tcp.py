@@ -52,9 +52,11 @@ def forward(ip, port_in, port_forward):
     socket_forward.listen(1)
     print ("*** listening on %s:%i" % ( ip, port_forward ))
 
-
+    print("1")
     thread.start_new_thread(listening_in, (socket_in,))
+    print("2")
     thread.start_new_thread(transmit_forward, (socket_in, socket_forward,))
+    print("3")
 
     lock = thread.allocate_lock()
     lock.acquire()
