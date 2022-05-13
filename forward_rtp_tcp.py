@@ -21,7 +21,7 @@ data_queue = []
 
 def listening_in(socket_in):
     client_in_socket, client_in_address = socket_in.accept()
-    print ("*** accept on %s:%i" % ( client_in_address, port_in ))
+    print ("*** accept on %s:%i" % ( client_in_address ))
 
     while True:
         data, addr = client_in_socket.recvfrom(BUFER_SIZE)
@@ -30,7 +30,7 @@ def listening_in(socket_in):
 
 def transmit_forward(socket_in, socket_forward):
     client_forward_socket, client_forward_address = socket_forward.accept()
-    print ("*** accept on %s:%i" % ( client_forward_address, port_forward ))
+    print ("*** accept on %s:%i" % ( client_forward_address ))
 
     while True:
         if len(data_queue) > 0:
