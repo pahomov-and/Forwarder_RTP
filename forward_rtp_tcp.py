@@ -2,6 +2,8 @@ import socket
 import threading
 import time
 import argparse
+import sys
+import thread
 
 BUFER_SIZE = 4 * 1024 
 
